@@ -1,0 +1,45 @@
+
+PROGRAM - 8
+  Exe Stack:
+int z; z=6; print((z / 0))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 8
+  Exe Stack:
+int z
+z=6; print((z / 0))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 8
+  Exe Stack:
+z=6; print((z / 0))
+  Sym Table:
+z-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 8
+  Exe Stack:
+z=6
+print((z / 0))
+  Sym Table:
+z-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 8
+  Exe Stack:
+print((z / 0))
+  Sym Table:
+z-->6
+  Out:
+  FileTable:
+  Heap:

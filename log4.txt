@@ -1,0 +1,196 @@
+
+PROGRAM - 26
+  Exe Stack:
+string varf; varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+string varf
+varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->''
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+varf='file.in'
+int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->''
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+int varc
+openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+openRFile(varf)
+ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+ReadFile(varf,varc)
+print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+print(varc)
+ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+ReadFile(varf,varc)
+print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+print(varc)
+CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+23
+  FileTable:
+'file.in'
+  Heap:
+
+PROGRAM - 26
+  Exe Stack:
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+23
+  FileTable:
+  Heap:

@@ -1,0 +1,54 @@
+
+PROGRAM - 1
+  Exe Stack:
+int v; v=2; print(v)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 1
+  Exe Stack:
+int v
+v=2; print(v)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 1
+  Exe Stack:
+v=2; print(v)
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 1
+  Exe Stack:
+v=2
+print(v)
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 1
+  Exe Stack:
+print(v)
+  Sym Table:
+v-->2
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 1
+  Exe Stack:
+  Sym Table:
+v-->2
+  Out:
+2
+  FileTable:
+  Heap:

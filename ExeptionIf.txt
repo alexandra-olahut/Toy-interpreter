@@ -1,0 +1,26 @@
+
+PROGRAM - 9
+  Exe Stack:
+int c; if (c) then { } else { }
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 9
+  Exe Stack:
+int c
+if (c) then { } else { }
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 9
+  Exe Stack:
+if (c) then { } else { }
+  Sym Table:
+c-->0
+  Out:
+  FileTable:
+  Heap:

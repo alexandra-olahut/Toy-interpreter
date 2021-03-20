@@ -1,0 +1,8 @@
+
+PROGRAM - 7
+  Exe Stack:
+var=2
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:

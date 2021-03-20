@@ -1,0 +1,8 @@
+
+PROGRAM - 24
+  Exe Stack:
+int a; a=3; fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:

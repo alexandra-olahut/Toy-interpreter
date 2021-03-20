@@ -1,0 +1,102 @@
+
+PROGRAM - 21
+  Exe Stack:
+int* v; v = new(20); print(*(v)); *v = 30; print((*(v) + 5))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 21
+  Exe Stack:
+int* v
+v = new(20); print(*(v)); *v = 30; print((*(v) + 5))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 21
+  Exe Stack:
+v = new(20); print(*(v)); *v = 30; print((*(v) + 5))
+  Sym Table:
+v-->null
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 21
+  Exe Stack:
+v = new(20)
+print(*(v)); *v = 30; print((*(v) + 5))
+  Sym Table:
+v-->null
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 21
+  Exe Stack:
+print(*(v)); *v = 30; print((*(v) + 5))
+  Sym Table:
+v-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->20
+
+PROGRAM - 21
+  Exe Stack:
+print(*(v))
+*v = 30; print((*(v) + 5))
+  Sym Table:
+v-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->20
+
+PROGRAM - 21
+  Exe Stack:
+*v = 30; print((*(v) + 5))
+  Sym Table:
+v-->(1,int)
+  Out:
+20
+  FileTable:
+  Heap:
+1-->20
+
+PROGRAM - 21
+  Exe Stack:
+*v = 30
+print((*(v) + 5))
+  Sym Table:
+v-->(1,int)
+  Out:
+20
+  FileTable:
+  Heap:
+1-->20
+
+PROGRAM - 21
+  Exe Stack:
+print((*(v) + 5))
+  Sym Table:
+v-->(1,int)
+  Out:
+20
+  FileTable:
+  Heap:
+1-->30
+
+PROGRAM - 21
+  Exe Stack:
+  Sym Table:
+v-->(1,int)
+  Out:
+20
+35
+  FileTable:
+  Heap:
+1-->30

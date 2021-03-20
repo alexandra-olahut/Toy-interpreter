@@ -1,0 +1,26 @@
+
+PROGRAM - 25
+  Exe Stack:
+bool a; a=13
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 25
+  Exe Stack:
+bool a
+a=13
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 25
+  Exe Stack:
+a=13
+  Sym Table:
+a-->false
+  Out:
+  FileTable:
+  Heap:

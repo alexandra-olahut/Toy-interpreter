@@ -1,0 +1,289 @@
+
+PROGRAM - 13
+  Exe Stack:
+int v; v=4; while (v > 0) {print(v); v=(v - 1)}; print(v)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+int v
+v=4; while (v > 0) {print(v); v=(v - 1)}; print(v)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=4; while (v > 0) {print(v); v=(v - 1)}; print(v)
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=4
+while (v > 0) {print(v); v=(v - 1)}; print(v)
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}; print(v)
+  Sym Table:
+v-->4
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->4
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v); v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->4
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v)
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->4
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->4
+  Out:
+4
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->3
+  Out:
+4
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v); v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->3
+  Out:
+4
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v)
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->3
+  Out:
+4
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->3
+  Out:
+4
+3
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->2
+  Out:
+4
+3
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v); v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->2
+  Out:
+4
+3
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v)
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->2
+  Out:
+4
+3
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->2
+  Out:
+4
+3
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->1
+  Out:
+4
+3
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v); v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->1
+  Out:
+4
+3
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v)
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->1
+  Out:
+4
+3
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+v=(v - 1)
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->1
+  Out:
+4
+3
+2
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+while (v > 0) {print(v); v=(v - 1)}
+print(v)
+  Sym Table:
+v-->0
+  Out:
+4
+3
+2
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+print(v)
+  Sym Table:
+v-->0
+  Out:
+4
+3
+2
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 13
+  Exe Stack:
+  Sym Table:
+v-->0
+  Out:
+4
+3
+2
+1
+0
+  FileTable:
+  Heap:

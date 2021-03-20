@@ -1,0 +1,63 @@
+
+PROGRAM - 12
+  Exe Stack:
+int a; a=3; if (a > 0 and a < 9) then {print(true)} else {print(false)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+int a
+a=3; if (a > 0 and a < 9) then {print(true)} else {print(false)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+a=3; if (a > 0 and a < 9) then {print(true)} else {print(false)}
+  Sym Table:
+a-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+a=3
+if (a > 0 and a < 9) then {print(true)} else {print(false)}
+  Sym Table:
+a-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+if (a > 0 and a < 9) then {print(true)} else {print(false)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+print(true)
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 12
+  Exe Stack:
+  Sym Table:
+a-->3
+  Out:
+true
+  FileTable:
+  Heap:

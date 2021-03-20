@@ -1,0 +1,17 @@
+
+PROGRAM - 11
+  Exe Stack:
+openRFile('a.a'); openRFile('a.a')
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 11
+  Exe Stack:
+openRFile('a.a')
+openRFile('a.a')
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:

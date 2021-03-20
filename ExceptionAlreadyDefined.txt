@@ -1,0 +1,26 @@
+
+PROGRAM - 5
+  Exe Stack:
+int a; int a
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 5
+  Exe Stack:
+int a
+int a
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 5
+  Exe Stack:
+int a
+  Sym Table:
+a-->0
+  Out:
+  FileTable:
+  Heap:
