@@ -1,5 +1,5 @@
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v1; int* v2; int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -11,7 +11,7 @@ int* v1; int* v2; int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLa
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v1
 int* v2; int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -24,7 +24,7 @@ int* v2; int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v2; int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -37,7 +37,7 @@ v1-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v2
 int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -51,7 +51,7 @@ v1-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v3; int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -65,7 +65,7 @@ v2-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int* v3
 int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -80,7 +80,7 @@ v2-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int cnt; v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -95,7 +95,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 int cnt
 v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -111,7 +111,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v1 = new(2); v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -127,7 +127,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v1 = new(2)
 v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -144,7 +144,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v2 = new(3); v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -161,7 +161,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v2 = new(3)
 v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -179,7 +179,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v3 = new(4); newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -197,7 +197,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 v3 = new(4)
 newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -216,7 +216,7 @@ v3-->null
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 newLatch(cnt,*(v2)); fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -235,7 +235,7 @@ v3-->(3,int)
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 newLatch(cnt,*(v2))
 fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
@@ -255,7 +255,7 @@ v3-->(3,int)
   LockTable:
   LatchTable:
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))); await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -275,7 +275,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 fork(*v1 = (*(v1) * 10); print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))))
 await(cnt); print(100); countDown(cnt); print(100)
@@ -296,7 +296,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt); print(100); countDown(cnt); print(100)
   Sym Table:
@@ -316,7 +316,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -337,7 +337,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 *v1 = (*(v1) * 10)
 print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
@@ -358,7 +358,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -379,7 +379,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 print(*(v1)); countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
   Sym Table:
@@ -399,7 +399,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -420,7 +420,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 print(*(v1))
 countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
@@ -441,7 +441,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -463,7 +463,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 countDown(cnt); fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
   Sym Table:
@@ -484,7 +484,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -506,7 +506,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 countDown(cnt)
 fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
@@ -528,7 +528,7 @@ v3-->(3,int)
   LatchTable:
 0-->3
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -539,7 +539,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -551,7 +551,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
 fork(*v2 = (*(v2) * 10); print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt)))
   Sym Table:
@@ -561,7 +561,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -573,7 +573,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -584,7 +584,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -596,7 +596,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 42
+PROGRAM - 96
   Exe Stack:
   Sym Table:
 cnt-->0
@@ -605,7 +605,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -617,7 +617,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -628,7 +628,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -640,7 +640,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 *v2 = (*(v2) * 10)
 print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
@@ -651,7 +651,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -663,7 +663,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -674,7 +674,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -686,7 +686,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 print(*(v2)); countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
   Sym Table:
@@ -696,7 +696,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -708,7 +708,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -719,7 +719,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -731,7 +731,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 print(*(v2))
 countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
@@ -742,7 +742,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
   FileTable:
   Heap:
 1-->20
@@ -754,7 +754,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -765,7 +765,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
   FileTable:
   Heap:
@@ -778,7 +778,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 countDown(cnt); fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
   Sym Table:
@@ -788,7 +788,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
   FileTable:
   Heap:
@@ -801,7 +801,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -812,7 +812,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
   FileTable:
   Heap:
@@ -825,7 +825,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 countDown(cnt)
 fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
@@ -836,7 +836,7 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
   FileTable:
   Heap:
@@ -849,7 +849,7 @@ v3-->(3,int)
   LatchTable:
 0-->2
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -860,9 +860,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -874,7 +874,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
 fork(*v3 = (*(v3) * 10); print(*(v3)); countDown(cnt))
   Sym Table:
@@ -884,9 +884,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -898,7 +898,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -909,9 +909,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -923,7 +923,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 43
+PROGRAM - 97
   Exe Stack:
   Sym Table:
 cnt-->0
@@ -932,9 +932,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -946,7 +946,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -957,9 +957,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -971,7 +971,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 44
+PROGRAM - 98
   Exe Stack:
 *v3 = (*(v3) * 10)
 print(*(v3)); countDown(cnt)
@@ -982,9 +982,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -996,7 +996,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -1007,9 +1007,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -1021,7 +1021,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 44
+PROGRAM - 98
   Exe Stack:
 print(*(v3)); countDown(cnt)
   Sym Table:
@@ -1031,9 +1031,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -1045,7 +1045,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -1056,9 +1056,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -1070,7 +1070,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 44
+PROGRAM - 98
   Exe Stack:
 print(*(v3))
 countDown(cnt)
@@ -1081,9 +1081,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
   FileTable:
   Heap:
 1-->20
@@ -1095,7 +1095,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -1106,9 +1106,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
   FileTable:
   Heap:
@@ -1121,7 +1121,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 44
+PROGRAM - 98
   Exe Stack:
 countDown(cnt)
   Sym Table:
@@ -1131,9 +1131,9 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
   FileTable:
   Heap:
@@ -1146,7 +1146,7 @@ v3-->(3,int)
   LatchTable:
 0-->1
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 await(cnt)
 print(100); countDown(cnt); print(100)
@@ -1157,11 +1157,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
   FileTable:
   Heap:
 1-->20
@@ -1173,7 +1173,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 44
+PROGRAM - 98
   Exe Stack:
   Sym Table:
 cnt-->0
@@ -1182,11 +1182,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
   FileTable:
   Heap:
 1-->20
@@ -1198,7 +1198,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 print(100); countDown(cnt); print(100)
   Sym Table:
@@ -1208,11 +1208,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
   FileTable:
   Heap:
 1-->20
@@ -1224,7 +1224,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 print(100)
 countDown(cnt); print(100)
@@ -1235,11 +1235,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
   FileTable:
   Heap:
 1-->20
@@ -1251,7 +1251,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 countDown(cnt); print(100)
   Sym Table:
@@ -1261,11 +1261,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
 100
   FileTable:
   Heap:
@@ -1278,7 +1278,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 countDown(cnt)
 print(100)
@@ -1289,11 +1289,11 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
 100
   FileTable:
   Heap:
@@ -1306,7 +1306,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
 print(100)
   Sym Table:
@@ -1316,13 +1316,13 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
 100
-41
+95
   FileTable:
   Heap:
 1-->20
@@ -1334,7 +1334,7 @@ v3-->(3,int)
   LatchTable:
 0-->0
 
-PROGRAM - 41
+PROGRAM - 95
   Exe Stack:
   Sym Table:
 cnt-->0
@@ -1343,13 +1343,13 @@ v2-->(2,int)
 v3-->(3,int)
   Out:
 20
-42
+96
 30
-43
+97
 40
-44
+98
 100
-41
+95
 100
   FileTable:
   Heap:

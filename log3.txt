@@ -1,13 +1,17 @@
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 bool a; int v; a=true; if (a) then {v=2} else {v=3}; print(v)
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 bool a
 int v; a=true; if (a) then {v=2} else {v=3}; print(v)
@@ -15,8 +19,12 @@ int v; a=true; if (a) then {v=2} else {v=3}; print(v)
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 int v; a=true; if (a) then {v=2} else {v=3}; print(v)
   Sym Table:
@@ -24,8 +32,12 @@ a-->false
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 int v
 a=true; if (a) then {v=2} else {v=3}; print(v)
@@ -34,8 +46,12 @@ a-->false
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 a=true; if (a) then {v=2} else {v=3}; print(v)
   Sym Table:
@@ -44,8 +60,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 a=true
 if (a) then {v=2} else {v=3}; print(v)
@@ -55,8 +75,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 if (a) then {v=2} else {v=3}; print(v)
   Sym Table:
@@ -65,8 +89,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 if (a) then {v=2} else {v=3}
 print(v)
@@ -76,8 +104,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 v=2
 print(v)
@@ -87,8 +119,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
 print(v)
   Sym Table:
@@ -97,8 +133,12 @@ v-->2
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 3
+PROGRAM - 35
   Exe Stack:
   Sym Table:
 a-->true
@@ -107,3 +147,7 @@ v-->2
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

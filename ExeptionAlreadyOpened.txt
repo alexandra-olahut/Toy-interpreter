@@ -1,13 +1,17 @@
 
-PROGRAM - 11
+PROGRAM - 45
   Exe Stack:
 openRFile('a.a'); openRFile('a.a')
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 11
+PROGRAM - 45
   Exe Stack:
 openRFile('a.a')
 openRFile('a.a')
@@ -15,3 +19,7 @@ openRFile('a.a')
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

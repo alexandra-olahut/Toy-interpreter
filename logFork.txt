@@ -1,8 +1,524 @@
 
-PROGRAM - 24
+PROGRAM - 58
   Exe Stack:
 int a; a=3; fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+int a
+a=3; fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=3; fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->0
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=3
+fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->0
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+fork(while (a > 0) {a=(a - 1); print(a)}); while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+fork(while (a > 0) {a=(a - 1); print(a)})
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1); print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1); print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1)
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1)
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->3
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->4
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->2
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->4
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->2
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1); print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->4
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1); print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->2
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1)
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->4
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1)
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->2
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->5
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->1
+  Out:
+4
+2
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->5
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->1
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1); print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->5
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1); print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->1
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+a=(a + 1)
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->5
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+a=(a - 1)
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->1
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+print(a)
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->6
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+print(a)
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->0
+  Out:
+4
+2
+5
+1
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+while (a < 6) {a=(a + 1); print(a)}
+  Sym Table:
+a-->6
+  Out:
+4
+2
+5
+1
+0
+6
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+while (a > 0) {a=(a - 1); print(a)}
+  Sym Table:
+a-->0
+  Out:
+4
+2
+5
+1
+0
+6
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 58
+  Exe Stack:
+  Sym Table:
+a-->6
+  Out:
+4
+2
+5
+1
+0
+6
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 59
+  Exe Stack:
+  Sym Table:
+a-->0
+  Out:
+4
+2
+5
+1
+0
+6
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

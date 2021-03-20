@@ -1,8 +1,12 @@
 
-PROGRAM - 7
+PROGRAM - 41
   Exe Stack:
 var=2
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

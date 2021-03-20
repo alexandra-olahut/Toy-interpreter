@@ -1,13 +1,17 @@
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int v; repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int v
 repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -15,8 +19,12 @@ repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int 
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
   Sym Table:
@@ -24,8 +32,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3)
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -34,8 +46,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1)); v=(v + 1); while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -44,8 +60,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1)); v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -55,8 +75,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1))
 v=(v + 1)
@@ -67,8 +91,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -78,8 +106,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -88,8 +120,12 @@ v-->1
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 37
+PROGRAM - 74
   Exe Stack:
 print(v)
 v=(v - 1)
@@ -98,8 +134,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1)); v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -110,8 +150,12 @@ v-->1
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 37
+PROGRAM - 74
   Exe Stack:
 v=(v - 1)
   Sym Table:
@@ -120,8 +164,12 @@ v-->0
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1))
 v=(v + 1)
@@ -133,8 +181,12 @@ v-->1
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 37
+PROGRAM - 74
   Exe Stack:
   Sym Table:
 v-->-1
@@ -142,8 +194,12 @@ v-->-1
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -154,8 +210,12 @@ v-->1
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -165,8 +225,12 @@ v-->2
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 38
+PROGRAM - 75
   Exe Stack:
 print(v)
 v=(v - 1)
@@ -176,8 +240,12 @@ v-->1
 0
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1)); v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -189,8 +257,12 @@ v-->2
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 38
+PROGRAM - 75
   Exe Stack:
 v=(v - 1)
   Sym Table:
@@ -200,8 +272,12 @@ v-->1
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 fork(print(v); v=(v - 1))
 v=(v + 1)
@@ -214,8 +290,12 @@ v-->2
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 38
+PROGRAM - 75
   Exe Stack:
   Sym Table:
 v-->0
@@ -224,8 +304,12 @@ v-->0
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 v=(v + 1)
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
@@ -237,8 +321,12 @@ v-->2
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
@@ -249,8 +337,12 @@ v-->3
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 39
+PROGRAM - 76
   Exe Stack:
 print(v)
 v=(v - 1)
@@ -261,8 +353,12 @@ v-->2
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
   Sym Table:
@@ -273,8 +369,12 @@ v-->3
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 39
+PROGRAM - 76
   Exe Stack:
 v=(v - 1)
   Sym Table:
@@ -285,8 +385,12 @@ v-->2
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int x; int y; int z; int w; x=1; y=2; z=3; w=4
 print((v * 10))
@@ -298,8 +402,12 @@ v-->3
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 39
+PROGRAM - 76
   Exe Stack:
   Sym Table:
 v-->1
@@ -309,8 +417,12 @@ v-->1
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int x
 int y; int z; int w; x=1; y=2; z=3; w=4
@@ -323,8 +435,12 @@ v-->3
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int y; int z; int w; x=1; y=2; z=3; w=4
 print((v * 10))
@@ -337,8 +453,12 @@ x-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int y
 int z; int w; x=1; y=2; z=3; w=4
@@ -352,8 +472,12 @@ x-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int z; int w; x=1; y=2; z=3; w=4
 print((v * 10))
@@ -367,8 +491,12 @@ y-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int z
 int w; x=1; y=2; z=3; w=4
@@ -383,8 +511,12 @@ y-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int w; x=1; y=2; z=3; w=4
 print((v * 10))
@@ -399,8 +531,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 int w
 x=1; y=2; z=3; w=4
@@ -416,8 +552,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 x=1; y=2; z=3; w=4
 print((v * 10))
@@ -433,8 +573,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 x=1
 y=2; z=3; w=4
@@ -451,8 +595,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 y=2; z=3; w=4
 print((v * 10))
@@ -468,8 +616,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 y=2
 z=3; w=4
@@ -486,8 +638,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 z=3; w=4
 print((v * 10))
@@ -503,8 +659,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 z=3
 w=4
@@ -521,8 +681,12 @@ z-->0
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 w=4
 print((v * 10))
@@ -538,8 +702,12 @@ z-->3
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
 print((v * 10))
   Sym Table:
@@ -554,8 +722,12 @@ z-->3
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 36
+PROGRAM - 73
   Exe Stack:
   Sym Table:
 v-->3
@@ -570,3 +742,7 @@ z-->3
 30
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

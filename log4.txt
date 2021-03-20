@@ -1,5 +1,5 @@
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 string varf; varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
   Sym Table:
@@ -11,7 +11,7 @@ string varf; varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); pri
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 string varf
 varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
@@ -24,7 +24,7 @@ varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); Rea
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 varf='file.in'; int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
   Sym Table:
@@ -37,7 +37,7 @@ varf-->''
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 varf='file.in'
 int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
@@ -51,7 +51,7 @@ varf-->''
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 int varc; openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
   Sym Table:
@@ -64,7 +64,7 @@ varf-->'file.in'
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 int varc
 openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
@@ -78,13 +78,188 @@ varf-->'file.in'
   LockTable:
   LatchTable:
 
-PROGRAM - 27
+PROGRAM - 37
   Exe Stack:
 openRFile(varf); ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
   Sym Table:
 varf-->'file.in'
 varc-->0
   Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+openRFile(varf)
+ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+ReadFile(varf,varc); print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+ReadFile(varf,varc)
+print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->0
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+print(varc); ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+print(varc)
+ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+ReadFile(varf,varc); print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+ReadFile(varf,varc)
+print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->13
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+print(varc); CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+print(varc)
+CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+CloseRFile(varf)
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+23
+  FileTable:
+'file.in'
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 37
+  Exe Stack:
+  Sym Table:
+varf-->'file.in'
+varc-->23
+  Out:
+13
+23
   FileTable:
   Heap:
   BarrierTable:

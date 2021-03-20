@@ -1,13 +1,17 @@
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
 int v; v=2; print(v)
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
 int v
 v=2; print(v)
@@ -15,8 +19,12 @@ v=2; print(v)
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
 v=2; print(v)
   Sym Table:
@@ -24,8 +32,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
 v=2
 print(v)
@@ -34,8 +46,12 @@ v-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
 print(v)
   Sym Table:
@@ -43,8 +59,12 @@ v-->2
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 1
+PROGRAM - 31
   Exe Stack:
   Sym Table:
 v-->2
@@ -52,3 +72,7 @@ v-->2
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

@@ -1,13 +1,17 @@
 
-PROGRAM - 8
+PROGRAM - 42
   Exe Stack:
 int z; z=6; print((z / 0))
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 8
+PROGRAM - 42
   Exe Stack:
 int z
 z=6; print((z / 0))
@@ -15,8 +19,12 @@ z=6; print((z / 0))
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 8
+PROGRAM - 42
   Exe Stack:
 z=6; print((z / 0))
   Sym Table:
@@ -24,8 +32,12 @@ z-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 8
+PROGRAM - 42
   Exe Stack:
 z=6
 print((z / 0))
@@ -34,8 +46,12 @@ z-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 8
+PROGRAM - 42
   Exe Stack:
 print((z / 0))
   Sym Table:
@@ -43,3 +59,7 @@ z-->6
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

@@ -1,13 +1,17 @@
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 int* v; v = new(20); int** a; a = new(v); *v = 30; print(*(*(a)))
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 int* v
 v = new(20); int** a; a = new(v); *v = 30; print(*(*(a)))
@@ -15,8 +19,12 @@ v = new(20); int** a; a = new(v); *v = 30; print(*(*(a)))
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 v = new(20); int** a; a = new(v); *v = 30; print(*(*(a)))
   Sym Table:
@@ -24,8 +32,12 @@ v-->null
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 v = new(20)
 int** a; a = new(v); *v = 30; print(*(*(a)))
@@ -34,8 +46,12 @@ v-->null
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 int** a; a = new(v); *v = 30; print(*(*(a)))
   Sym Table:
@@ -44,18 +60,12 @@ v-->(1,int)
   FileTable:
   Heap:
 1-->20
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
-  Exe Stack:
-int** a; a = new(v); *v = 30; print(*(*(a)))
-  Sym Table:
-v-->(1,int)
-  Out:
-  FileTable:
-  Heap:
-1-->20
-
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 int** a
 a = new(v); *v = 30; print(*(*(a)))
@@ -65,8 +75,12 @@ v-->(1,int)
   FileTable:
   Heap:
 1-->20
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 a = new(v); *v = 30; print(*(*(a)))
   Sym Table:
@@ -76,8 +90,12 @@ v-->(1,int)
   FileTable:
   Heap:
 1-->20
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 a = new(v)
 *v = 30; print(*(*(a)))
@@ -88,8 +106,12 @@ v-->(1,int)
   FileTable:
   Heap:
 1-->20
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 *v = 30; print(*(*(a)))
   Sym Table:
@@ -100,8 +122,12 @@ v-->(1,int)
   Heap:
 1-->20
 2-->(1,int)
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 *v = 30
 print(*(*(a)))
@@ -113,8 +139,12 @@ v-->(1,int)
   Heap:
 1-->20
 2-->(1,int)
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
 print(*(*(a)))
   Sym Table:
@@ -125,8 +155,12 @@ v-->(1,int)
   Heap:
 1-->30
 2-->(1,int)
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 21
+PROGRAM - 56
   Exe Stack:
   Sym Table:
 a-->(2,int*)
@@ -137,3 +171,7 @@ v-->(1,int)
   Heap:
 1-->30
 2-->(1,int)
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

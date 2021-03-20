@@ -1,13 +1,17 @@
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 int a; int b; a=(2 + (3 * 5)); b=(a + 1); print(b)
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 int a
 int b; a=(2 + (3 * 5)); b=(a + 1); print(b)
@@ -15,8 +19,12 @@ int b; a=(2 + (3 * 5)); b=(a + 1); print(b)
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 int b; a=(2 + (3 * 5)); b=(a + 1); print(b)
   Sym Table:
@@ -24,8 +32,12 @@ a-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 int b
 a=(2 + (3 * 5)); b=(a + 1); print(b)
@@ -34,8 +46,12 @@ a-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 a=(2 + (3 * 5)); b=(a + 1); print(b)
   Sym Table:
@@ -44,8 +60,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 a=(2 + (3 * 5))
 b=(a + 1); print(b)
@@ -55,8 +75,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 b=(a + 1); print(b)
   Sym Table:
@@ -65,8 +89,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 b=(a + 1)
 print(b)
@@ -76,8 +104,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
 print(b)
   Sym Table:
@@ -86,8 +118,12 @@ b-->18
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 2
+PROGRAM - 33
   Exe Stack:
   Sym Table:
 a-->17
@@ -96,3 +132,7 @@ b-->18
 18
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

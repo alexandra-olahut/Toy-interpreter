@@ -1,13 +1,17 @@
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int a; int b; int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int a
 int b; int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -15,8 +19,12 @@ int b; int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int b; int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -24,8 +32,12 @@ a-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int b
 int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -34,8 +46,12 @@ a-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int c; a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -44,8 +60,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 int c
 a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -55,8 +75,12 @@ b-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 a=1; b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -66,8 +90,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 a=1
 b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -78,8 +106,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 b=2; c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -89,8 +121,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 b=2
 c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -101,8 +137,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 c=5; switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -112,8 +152,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 c=5
 switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
@@ -124,8 +168,12 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300)); print(300)
   Sym Table:
@@ -135,8 +183,12 @@ c-->5
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 switch((a * 10)) (case (b * c): print(a); print(b))(case 10: print(100); print(200))(default: print(300))
 print(300)
@@ -147,8 +199,12 @@ c-->5
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 if ((a * 10) == (b * c)) then {print(a); print(b)} else {if ((a * 10) == 10) then {print(100); print(200)} else {print(300)}}
 print(300)
@@ -159,8 +215,12 @@ c-->5
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 print(a); print(b)
 print(300)
@@ -171,8 +231,12 @@ c-->5
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 print(a)
 print(b)
@@ -184,8 +248,12 @@ c-->5
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 print(b)
 print(300)
@@ -197,8 +265,12 @@ c-->5
 1
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
 print(300)
   Sym Table:
@@ -210,8 +282,12 @@ c-->5
 2
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 44
+PROGRAM - 81
   Exe Stack:
   Sym Table:
 a-->1
@@ -223,3 +299,7 @@ c-->5
 300
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

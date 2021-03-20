@@ -1,13 +1,17 @@
 
-PROGRAM - 9
+PROGRAM - 43
   Exe Stack:
 int c; if (c) then { } else { }
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 9
+PROGRAM - 43
   Exe Stack:
 int c
 if (c) then { } else { }
@@ -15,8 +19,12 @@ if (c) then { } else { }
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
 
-PROGRAM - 9
+PROGRAM - 43
   Exe Stack:
 if (c) then { } else { }
   Sym Table:
@@ -24,3 +32,7 @@ c-->0
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:

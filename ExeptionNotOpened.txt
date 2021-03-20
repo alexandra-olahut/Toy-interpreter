@@ -1,8 +1,12 @@
 
-PROGRAM - 10
+PROGRAM - 44
   Exe Stack:
 CloseRFile('file.txt')
   Sym Table:
   Out:
   FileTable:
   Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
