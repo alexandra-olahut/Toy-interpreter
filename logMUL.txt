@@ -1,0 +1,108 @@
+
+PROGRAM - 34
+  Exe Stack:
+int v1; int v2; v1=2; v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+int v1
+int v2; v1=2; v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+int v2; v1=2; v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+int v2
+v1=2; v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+v1=2; v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->0
+v2-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+v1=2
+v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->0
+v2-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+v2=3; if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->2
+v2-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+v2=3
+if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->2
+v2-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+if (v1 != 0) then {print(MUL(v1,v2))} else {print(v1)}
+  Sym Table:
+v1-->2
+v2-->3
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+print(MUL(v1,v2))
+  Sym Table:
+v1-->2
+v2-->3
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 34
+  Exe Stack:
+  Sym Table:
+v1-->2
+v2-->3
+  Out:
+1
+  FileTable:
+  Heap:

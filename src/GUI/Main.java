@@ -1,16 +1,6 @@
 package GUI;
 
 
-//TO DO
-/*
-add file.in for example
-modify command -> program can be run again   /  make exception
-style.css
-check all programs
-check warnings
-make structure pretty
-
-*/
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;

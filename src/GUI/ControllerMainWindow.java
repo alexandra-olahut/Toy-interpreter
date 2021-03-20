@@ -237,10 +237,40 @@ public class ControllerMainWindow implements Initializable {
 
 
 
-        Stmt ex20 = exLab8();
-        PrgState prg20 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex20);
-        IRepository repo20 = new Repository("log20.txt", prg20);
+        Stmt CondAssign = CondAssign();
+        PrgState prg20 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), CondAssign);
+        IRepository repo20 = new Repository("logCONDASSIGN.txt", prg20);
         Controller ctr20 = new Controller(repo20);
+
+        Stmt FOR = forS();
+        PrgState prg21 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), FOR);
+        IRepository repo21 = new Repository("logFOR.txt", prg21);
+        Controller ctr21 = new Controller(repo21);
+
+        Stmt exMUL = exMUL();
+        PrgState prg22 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exMUL);
+        IRepository repo22 = new Repository("logMUL.txt", prg22);
+        Controller ctr22 = new Controller(repo22);
+
+        Stmt exRepeat = exRepeat();
+        PrgState prg23 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exRepeat);
+        IRepository repo23 = new Repository("logRepeat.txt", prg23);
+        Controller ctr23 = new Controller(repo23);
+
+        Stmt exSleep = exSleep();
+        PrgState prg24 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exSleep);
+        IRepository repo24 = new Repository("logSleep.txt", prg24);
+        Controller ctr24 = new Controller(repo24);
+
+        Stmt SWITCH = exSwitch();
+        PrgState prg25 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), SWITCH);
+        IRepository repo25 = new Repository("logSWITCH.txt", prg25);
+        Controller ctr25 = new Controller(repo25);
+
+        Stmt exWait = exWait();
+        PrgState prg26 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exWait);
+        IRepository repo26 = new Repository("logWait.txt", prg26);
+        Controller ctr26 = new Controller(repo26);
 
 
 
@@ -265,54 +295,42 @@ public class ControllerMainWindow implements Initializable {
         menu.addCommand(new RunExampleCommand("17", exGarbage.toString(), ctr17, exGarbage));
         menu.addCommand(new RunExampleCommand("18", exFork.toString(), ctr18, exFork));
         menu.addCommand(new RunExampleCommand("19", exLab8.toString(), ctr19, exLab8));
-
+        menu.addCommand(new RunExampleCommand("20", CondAssign.toString(), ctr20, CondAssign));
+        menu.addCommand(new RunExampleCommand("21", FOR.toString(), ctr21, FOR));
+        menu.addCommand(new RunExampleCommand("22", exMUL.toString(), ctr22, exMUL));
+        menu.addCommand(new RunExampleCommand("23", exRepeat.toString(), ctr23, exRepeat));
+        menu.addCommand(new RunExampleCommand("24", exSleep.toString(), ctr24, exSleep));
+        menu.addCommand(new RunExampleCommand("25", SWITCH.toString(), ctr25, SWITCH));
+        menu.addCommand(new RunExampleCommand("26", exWait.toString(), ctr26, exWait));
     }
 
 
 
-
-
-    private static Stmt exSleep1(){
-        return new CompStmt(new VarDeclStmt("v", new IntType()),
-                new CompStmt(new WhileStmt(new RelationalExp("<", new VarExp("v"), new ValueExp(new IntValue(3))),
-                        new CompStmt(new ForkStmt(new CompStmt(new PrintStmt(new VarExp("v")),
-                                new AssignStmt("v", new ArithExp('+', new VarExp("v"), new ValueExp(new IntValue(1)))))),
-                                new AssignStmt("v", new ArithExp('+', new VarExp("v"), new ValueExp(new IntValue(1)))))),
-                        new CompStmt(new SleepStmt(5), new PrintStmt(new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(10)))))));
-    }
-
-    private static Stmt exCondAssign1(){
-        return new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
-                new CompStmt(new VarDeclStmt("b", new RefType(new IntType())),
-                        new CompStmt(new VarDeclStmt("v", new IntType()),
-                                new CompStmt(new NewStmt("a", new ValueExp(new IntValue(0))),
-                                        new CompStmt(new NewStmt("b", new ValueExp(new IntValue(0))),
-                                                new CompStmt(new WriteHpStmt("a", new ValueExp(new IntValue(1))),
-                                                        new CompStmt(new WriteHpStmt("b", new ValueExp(new IntValue(2))),
-                                                                new CompStmt(new CondAssignStmt("v", new RelationalExp("<", new ReadHpExp(new VarExp("a")),new ReadHpExp(new VarExp("b"))),
-                                                                        new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
-                                                                        new CompStmt(new PrintStmt(new VarExp("v")),
-                                                                                new CompStmt(new CondAssignStmt("v", new RelationalExp(">", new ArithExp('-', new ReadHpExp(new VarExp("b")), new ValueExp(new IntValue(2))),
-                                                                                        new ReadHpExp(new VarExp("a"))), new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
-                                                                                        new PrintStmt(new VarExp("v"))))))))))));
-    }
-
-    private static Stmt exCondAssign2(){
-        return new CompStmt(new VarDeclStmt("b", new BoolType()), new CompStmt(new VarDeclStmt("c", new IntType()),
-                new CompStmt(new AssignStmt("b", new ValueExp(new BoolValue(true))),
-                        new CompStmt(new CondAssignStmt("c", new VarExp("b"), new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
-                                new CompStmt(new PrintStmt(new VarExp("c")),
-                                        new CompStmt(new CondAssignStmt("c", new ValueExp(new BoolValue(false)), new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
-                                                new PrintStmt(new VarExp("c"))))))));
-    }
-
-    private static Stmt exFor1(){
+    private static Stmt exWait(){
         return new CompStmt(new VarDeclStmt("v", new IntType()), new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(20))),
-                new CompStmt(new ForStmt("v", new ValueExp(new IntValue(0)), new ValueExp(new IntValue(3)),
-                        new ArithExp('+', new VarExp("v"), new ValueExp(new IntValue(1))),
-                        new ForkStmt(new CompStmt(new PrintStmt(new VarExp("v")),
-                                new AssignStmt("v",new ArithExp('+',new VarExp("v"), new ValueExp(new IntValue(1))))))),
-                        new PrintStmt(new ArithExp('*',new VarExp("v"), new ValueExp(new IntValue(10)))))));
+                new CompStmt(new WaitStmt(10), new PrintStmt(new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(10)))))));
+    }
+
+    private static Stmt exSwitch(){
+        Stmt switchS = new SwitchStmt(new ArithExp('*', new VarExp("a"), new ValueExp(new IntValue(10))),
+                new ArithExp('*', new VarExp("b"), new VarExp("c")), new ValueExp(new IntValue(10)),
+                new CompStmt(new PrintStmt(new VarExp("a")), new PrintStmt(new VarExp("b"))),
+                new CompStmt(new PrintStmt(new ValueExp(new IntValue(100))), new PrintStmt(new ValueExp(new IntValue(200)))),
+                new PrintStmt(new ValueExp(new IntValue(300))));
+
+        return new CompStmt(new VarDeclStmt("a", new IntType()), new CompStmt(new VarDeclStmt("b", new IntType()),
+                new CompStmt(new VarDeclStmt("c", new IntType()),
+                        new CompStmt(new AssignStmt("a", new ValueExp(new IntValue(1))),
+                                new CompStmt(new AssignStmt("b", new ValueExp(new IntValue(2))),
+                                        new CompStmt(new AssignStmt("c", new ValueExp(new IntValue(5))),
+                                                new CompStmt(switchS, new PrintStmt(new ValueExp(new IntValue(300))))))))));
+    }
+
+    private static Stmt exSleep(){
+        Stmt decr = new AssignStmt("v", new ArithExp('-', new VarExp("v"), new ValueExp(new IntValue(1))));
+        return new CompStmt(new VarDeclStmt("v", new IntType()), new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(10))),
+                new CompStmt(new ForkStmt(new CompStmt(decr, new CompStmt(decr, new PrintStmt(new VarExp("v"))))),
+                        new CompStmt(new SleepStmt(10), new PrintStmt(new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(10))))))));
     }
 
     private static Stmt exRepeat(){
@@ -330,7 +348,44 @@ public class ControllerMainWindow implements Initializable {
                         new CompStmt(declStmt, new PrintStmt(new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(10)))))));
     }
 
+    private static Stmt exMUL(){
+        return new CompStmt(new VarDeclStmt("v1", new IntType()), new CompStmt(new VarDeclStmt("v2", new IntType()),
+                new CompStmt(new AssignStmt("v1", new ValueExp(new IntValue(2))),
+                        new CompStmt(new AssignStmt("v2", new ValueExp(new IntValue(3))),
+                                new IfStmt(new RelationalExp("!=", new VarExp("v1"), new ValueExp(new IntValue(0))),
+                                        new PrintStmt(new MULExp(new VarExp("v1"), new VarExp("v2"))),
+                                        new PrintStmt(new VarExp("v1")))))));
+    }
 
+    private static Stmt forS(){
+        return new CompStmt(new VarDeclStmt("v", new IntType()), new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(20))),
+                new CompStmt(new ForStmt("v", new ValueExp(new IntValue(0)), new ValueExp(new IntValue(3)),
+                        new ArithExp('+', new VarExp("v"), new ValueExp(new IntValue(1))),
+                        new ForkStmt(new CompStmt(new PrintStmt(new VarExp("v")),
+                                new AssignStmt("v",new ArithExp('+',new VarExp("v"), new ValueExp(new IntValue(1))))))),
+                        new PrintStmt(new ArithExp('*',new VarExp("v"), new ValueExp(new IntValue(10)))))));
+    }
+
+    private static Stmt CondAssign(){
+        Stmt init = new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
+                new CompStmt(new VarDeclStmt("b", new RefType(new IntType())),
+                        new CompStmt(new VarDeclStmt("v", new IntType()),
+                                new CompStmt(new NewStmt("a", new ValueExp(new IntValue(0))),
+                                        new NewStmt("b", new ValueExp(new IntValue(0)))))));
+        Stmt wheap = new CompStmt(new WriteHpStmt("a", new ValueExp(new IntValue(1))),
+                new WriteHpStmt("b", new ValueExp(new IntValue(2))));
+        Stmt vs = new CompStmt(new CondAssignStmt("v", new RelationalExp("<",
+                new ReadHpExp(new VarExp("a")), new ReadHpExp(new VarExp("b"))),
+                new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
+                new CompStmt(new PrintStmt(new VarExp("v")),
+                        new CompStmt(new CondAssignStmt("v", new RelationalExp(">",
+                                new ArithExp('-', new ReadHpExp(new VarExp("b")),new ValueExp(new IntValue(2))),
+                                new ReadHpExp(new VarExp("a"))),
+                                new ValueExp(new IntValue(100)), new ValueExp(new IntValue(200))),
+                                new PrintStmt(new VarExp("v")))));
+
+        return new CompStmt(init, new CompStmt(wheap, vs));
+    }
 
 
 

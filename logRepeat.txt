@@ -1,0 +1,572 @@
+
+PROGRAM - 36
+  Exe Stack:
+int v; repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int v
+repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3); int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+repeat {fork(print(v); v=(v - 1)); v=(v + 1)} until (v == 3)
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1)); v=(v + 1); while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1)); v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1))
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->1
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 37
+  Exe Stack:
+print(v)
+v=(v - 1)
+  Sym Table:
+v-->0
+  Out:
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1)); v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->1
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 37
+  Exe Stack:
+v=(v - 1)
+  Sym Table:
+v-->0
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1))
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->1
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 37
+  Exe Stack:
+  Sym Table:
+v-->-1
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->1
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->2
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 38
+  Exe Stack:
+print(v)
+v=(v - 1)
+  Sym Table:
+v-->1
+  Out:
+0
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1)); v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->2
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 38
+  Exe Stack:
+v=(v - 1)
+  Sym Table:
+v-->1
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+fork(print(v); v=(v - 1))
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->2
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 38
+  Exe Stack:
+  Sym Table:
+v-->0
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+v=(v + 1)
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->2
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+while (!v == 3) {fork(print(v); v=(v - 1)); v=(v + 1)}
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->3
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 39
+  Exe Stack:
+print(v)
+v=(v - 1)
+  Sym Table:
+v-->2
+  Out:
+0
+1
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int x; int y; int z; int w; x=1; y=2; z=3; w=4; print((v * 10))
+  Sym Table:
+v-->3
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 39
+  Exe Stack:
+v=(v - 1)
+  Sym Table:
+v-->2
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int x; int y; int z; int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 39
+  Exe Stack:
+  Sym Table:
+v-->1
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int x
+int y; int z; int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int y; int z; int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int y
+int z; int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int z; int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+y-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int z
+int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+y-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int w; x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+int w
+x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+x-->0
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+x=1; y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->0
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+x=1
+y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->0
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+y=2; z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->1
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+y=2
+z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->1
+y-->0
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+z=3; w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->1
+y-->2
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+z=3
+w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->1
+y-->2
+z-->0
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+w=4
+print((v * 10))
+  Sym Table:
+v-->3
+w-->0
+x-->1
+y-->2
+z-->3
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+print((v * 10))
+  Sym Table:
+v-->3
+w-->4
+x-->1
+y-->2
+z-->3
+  Out:
+0
+1
+2
+  FileTable:
+  Heap:
+
+PROGRAM - 36
+  Exe Stack:
+  Sym Table:
+v-->3
+w-->4
+x-->1
+y-->2
+z-->3
+  Out:
+0
+1
+2
+30
+  FileTable:
+  Heap:
