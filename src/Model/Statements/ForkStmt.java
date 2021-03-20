@@ -1,6 +1,6 @@
 package Model.Statements;
 
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.ADT.MyStack;
 import Model.ProgramState.PrgState;
 import Model.Types.Type;
@@ -18,6 +18,10 @@ public class ForkStmt implements Stmt {
                 state.getOut(),
                 state.getFileTable(),
                 state.getHeap(),
+                state.getBarrierTable(),
+                state.getSemaphoreTable(),
+                state.getLockTable(),
+                state.getLatchTable(),
                 stmt);
     }
 

@@ -1,12 +1,16 @@
-package Model.Statements;
+package Model.Statements.Loops;
 
 import Exceptions.*;
-import Model.ADT.IDict;
-import Model.ADT.IHeap;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IHeap;
 import Model.Expressions.Exp;
 import Model.Expressions.RelationalExp;
 import Model.Expressions.VarExp;
 import Model.ProgramState.PrgState;
+import Model.Statements.AssignStmt;
+import Model.Statements.CompStmt;
+import Model.Statements.Stmt;
+import Model.Statements.Loops.WhileStmt;
 import Model.Types.IntType;
 import Model.Types.Type;
 import Model.Values.Value;

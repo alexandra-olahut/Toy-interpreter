@@ -36,7 +36,7 @@ public class RunExampleCommand extends Command {
 
     public void reset() {
         List<PrgState> prgs = new ArrayList<PrgState>();
-        prgs.add(new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), initialPrg));
+        prgs.add(new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), initialPrg));
         controller.getRepo().setPrgList(prgs);
     }
 

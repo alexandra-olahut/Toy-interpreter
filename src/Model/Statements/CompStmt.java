@@ -1,7 +1,7 @@
 package Model.Statements;
 
-import Model.ADT.IDict;
-import Model.ADT.IStack;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IStack;
 import Model.ProgramState.PrgState;
 import Model.Types.Type;
 

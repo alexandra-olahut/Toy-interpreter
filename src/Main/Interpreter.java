@@ -5,6 +5,13 @@ import Model.ADT.*;
 import Model.Expressions.*;
 import Model.ProgramState.PrgState;
 import Model.Statements.*;
+import Model.Statements.Conditionals.IfStmt;
+import Model.Statements.Files.CloseRFile;
+import Model.Statements.Files.OpenRFile;
+import Model.Statements.Files.ReadFile;
+import Model.Statements.Heap.NewStmt;
+import Model.Statements.Heap.WriteHpStmt;
+import Model.Statements.Loops.WhileStmt;
 import Model.Types.*;
 import Model.Values.*;
 import Repository.*;
@@ -16,104 +23,104 @@ public class Interpreter {
 
         /// Examples from lab pdf
         Stmt s1 = ex1();
-        PrgState prg1 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), s1);
+        PrgState prg1 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), s1);
         IRepository repo1 = new Repository("log1.txt", prg1);
         Controller ctr1 = new Controller(repo1);
 
         Stmt s2 = ex2();
-        PrgState prg2 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), s2);
+        PrgState prg2 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), s2);
         IRepository repo2 = new Repository("log2.txt", prg2);
         Controller ctr2 = new Controller(repo2);
 
         Stmt s3 = ex3();
-        PrgState prg3 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), s3);
+        PrgState prg3 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), s3);
         IRepository repo3 = new Repository("log3.txt", prg3);
         Controller ctr3 = new Controller(repo3);
 
         /// Example with files
         Stmt files = fileTest();
-        PrgState prg4 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), files);
+        PrgState prg4 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), files);
         IRepository repo4 = new Repository("log4.txt", prg4);
         Controller ctr4 = new Controller(repo4);
 
         /// Examples with exceptions
         Stmt ex1 = exAlreadyDefinedException();
-        PrgState prg5 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex1);
+        PrgState prg5 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex1);
         IRepository repo5 = new Repository("ExceptionAlreadyDefined.txt", prg5);
         Controller ctr5 = new Controller(repo5);
 
         Stmt ex2 = exAssignException();
-        PrgState prg6 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex2);
+        PrgState prg6 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex2);
         IRepository repo6 = new Repository("ExceptionAssign.txt", prg6);
         Controller ctr6 = new Controller(repo6);
 
         Stmt ex3 = exUndefinedException();
-        PrgState prg7 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex3);
+        PrgState prg7 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex3);
         IRepository repo7 = new Repository("ExceptionUndefined.txt", prg7);
         Controller ctr7 = new Controller(repo7);
 
         Stmt ex4 = exDivisionByZero();
-        PrgState prg8 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex4);
+        PrgState prg8 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex4);
         IRepository repo8 = new Repository("ExeptionDiv0.txt", prg8);
         Controller ctr8 = new Controller(repo8);
 
         Stmt ex5 = exIfException();
-        PrgState prg9 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex5);
+        PrgState prg9 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex5);
         IRepository repo9 = new Repository("ExeptionIf.txt", prg9);
         Controller ctr9 = new Controller(repo9);
 
 
         Stmt ex6 = fileNotOpenedException();
-        PrgState prg10 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex6);
+        PrgState prg10 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex6);
         IRepository repo10 = new Repository("ExeptionNotOpened.txt", prg10);
         Controller ctr10 = new Controller(repo10);
 
         Stmt ex7 = fileAlreadyOpenedException();
-        PrgState prg11 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), ex7);
+        PrgState prg11 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), ex7);
         IRepository repo11 = new Repository("ExeptionAlreadyOpened.txt", prg11);
         Controller ctr11 = new Controller(repo11);
 
 
         Stmt bonus = relLogicExp();
-        PrgState prg12 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), bonus);
+        PrgState prg12 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), bonus);
         IRepository repo12 = new Repository("logBonus.txt", prg12);
         Controller ctr12 = new Controller(repo12);
 
 
         Stmt exWhile = exWhile();
-        PrgState prg13 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exWhile);
+        PrgState prg13 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exWhile);
         IRepository repo13 = new Repository("logWhile.txt", prg13);
         Controller ctr13 = new Controller(repo13);
 
         Stmt exNew = exNew();
-        PrgState prg14 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exNew);
+        PrgState prg14 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exNew);
         IRepository repo14 = new Repository("logNew.txt", prg14);
         Controller ctr14 = new Controller(repo14);
 
         Stmt exRH = exRH();
-        PrgState prg15 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exRH);
+        PrgState prg15 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exRH);
         IRepository repo15 = new Repository("logRHExp.txt", prg15);
         Controller ctr15 = new Controller(repo15);
 
         Stmt exWH = exWH();
-        PrgState prg16 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exWH);
+        PrgState prg16 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exWH);
         IRepository repo16 = new Repository("logWHStmt.txt", prg16);
         Controller ctr16 = new Controller(repo16);
 
         Stmt exGarbage = exGarbage();
-        PrgState prg17 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exGarbage);
+        PrgState prg17 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exGarbage);
         IRepository repo17 = new Repository("logGarbage.txt", prg17);
         Controller ctr17 = new Controller(repo17);
 
 
         //A5
         Stmt exFork = exFork();
-        PrgState prg18 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exFork);
+        PrgState prg18 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exFork);
         IRepository repo18 = new Repository("logFork.txt", prg18);
         Controller ctr18 = new Controller(repo18);
 
         Stmt exLab8 = exLab8();
-        PrgState prg19 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), exLab8);
+        PrgState prg19 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exLab8);
         IRepository repo19 = new Repository("logLab8.txt", prg19);
         Controller ctr19 = new Controller(repo19);
 

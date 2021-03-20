@@ -2,8 +2,8 @@ package Model.Statements;
 
 import Exceptions.ExpException;
 import Exceptions.HeapException;
-import Model.ADT.IDict;
-import Model.ADT.IList;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IList;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
 import Model.Types.Type;

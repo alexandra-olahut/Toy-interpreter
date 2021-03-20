@@ -1,6 +1,7 @@
 package Model.ADT;
 
 import Exceptions.ADTException;
+import Model.ADT.Interfaces.IStack;
 
 import java.util.ArrayList;
 import java.util.List;

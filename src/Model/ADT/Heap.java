@@ -1,5 +1,6 @@
 package Model.ADT;
 
+import Model.ADT.Interfaces.IHeap;
 import Model.Values.Value;
 
 import java.util.Collections;

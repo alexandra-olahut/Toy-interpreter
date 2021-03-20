@@ -1,4 +1,4 @@
-package Model.ADT;
+package Model.ADT.Interfaces;
 
 import Model.Values.Value;
 

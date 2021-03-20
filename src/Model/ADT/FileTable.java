@@ -1,5 +1,6 @@
 package Model.ADT;
 
+import Model.ADT.Interfaces.IFileTable;
 import Model.Values.StringValue;
 import java.io.BufferedReader;
 import java.util.Collections;

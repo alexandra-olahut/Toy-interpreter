@@ -1,6 +1,6 @@
 package Model.Statements;
 
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.ProgramState.PrgState;
 import Model.Types.Type;
 

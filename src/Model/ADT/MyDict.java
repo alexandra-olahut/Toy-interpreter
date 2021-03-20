@@ -1,10 +1,12 @@
 package Model.ADT;
 
+import Model.ADT.Interfaces.IDict;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class MyDict<K,V> implements IDict<K,V>{
+public class MyDict<K,V> implements IDict<K,V> {
 
     private final HashMap<K,V> elements;
     public MyDict() {elements = new HashMap<>();}

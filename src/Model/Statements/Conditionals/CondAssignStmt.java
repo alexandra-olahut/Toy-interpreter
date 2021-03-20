@@ -1,9 +1,11 @@
-package Model.Statements;
+package Model.Statements.Conditionals;
 
 import Exceptions.*;
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
+import Model.Statements.AssignStmt;
+import Model.Statements.Stmt;
 import Model.Types.BoolType;
 import Model.Types.Type;
 

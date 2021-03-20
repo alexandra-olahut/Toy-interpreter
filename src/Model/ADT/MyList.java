@@ -1,5 +1,7 @@
 package Model.ADT;
 
+import Model.ADT.Interfaces.IList;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

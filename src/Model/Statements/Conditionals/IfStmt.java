@@ -1,13 +1,14 @@
-package Model.Statements;
+package Model.Statements.Conditionals;
 
 import Exceptions.ExpException;
 import Exceptions.HeapException;
 import Exceptions.StmtException;
 import Exceptions.TypeException;
-import Model.ADT.IDict;
-import Model.ADT.IStack;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IStack;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
+import Model.Statements.Stmt;
 import Model.Types.BoolType;
 import Model.Types.Type;
 import Model.Values.BoolValue;

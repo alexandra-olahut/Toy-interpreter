@@ -1,7 +1,7 @@
 package Model.Expressions;
 
-import Model.ADT.IDict;
-import Model.ADT.IHeap;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IHeap;
 import Model.Types.Type;
 import Model.Values.Value;
 

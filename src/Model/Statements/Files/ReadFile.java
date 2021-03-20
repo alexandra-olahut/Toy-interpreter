@@ -1,10 +1,11 @@
-package Model.Statements;
+package Model.Statements.Files;
 
 import Exceptions.*;
-import Model.ADT.IDict;
-import Model.ADT.IFileTable;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IFileTable;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
+import Model.Statements.Stmt;
 import Model.Types.IntType;
 import Model.Types.StringType;
 import Model.Types.Type;

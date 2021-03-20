@@ -1,13 +1,14 @@
-package Model.Statements;
+package Model.Statements.Heap;
 
 import Exceptions.ExpException;
 import Exceptions.HeapException;
 import Exceptions.StmtException;
 import Exceptions.TypeException;
-import Model.ADT.IDict;
-import Model.ADT.IHeap;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IHeap;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
+import Model.Statements.Stmt;
 import Model.Types.RefType;
 import Model.Types.Type;
 import Model.Values.RefValue;

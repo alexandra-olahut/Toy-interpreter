@@ -1,13 +1,14 @@
-package Model.Statements;
+package Model.Statements.Conditionals;
 
 import Exceptions.*;
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.Expressions.Exp;
 import Model.Expressions.RelationalExp;
 import Model.ProgramState.PrgState;
+import Model.Statements.Stmt;
 import Model.Types.Type;
 
-public class SwitchStmt implements Stmt{
+public class SwitchStmt implements Stmt {
 
     private final Exp exp;
     private final Exp exp1;

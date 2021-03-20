@@ -1,15 +1,17 @@
-package Model.Statements;
+package Model.Statements.Loops;
 
 import Exceptions.ExpException;
 import Exceptions.FileException;
 import Exceptions.HeapException;
 import Exceptions.StmtException;
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.Expressions.Exp;
 import Model.Expressions.NotExp;
 import Model.Expressions.RelationalExp;
 import Model.Expressions.ValueExp;
 import Model.ProgramState.PrgState;
+import Model.Statements.CompStmt;
+import Model.Statements.Stmt;
 import Model.Types.Type;
 import Model.Values.BoolValue;
 

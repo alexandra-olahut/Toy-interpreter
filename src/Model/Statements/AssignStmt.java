@@ -4,7 +4,7 @@ import Exceptions.ExpException;
 import Exceptions.HeapException;
 import Exceptions.StmtException;
 import Exceptions.TypeException;
-import Model.ADT.IDict;
+import Model.ADT.Interfaces.IDict;
 import Model.Expressions.Exp;
 import Model.ProgramState.PrgState;
 import Model.Types.Type;

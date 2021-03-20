@@ -1,7 +1,7 @@
 package Controller;
 
-import Model.ADT.IDict;
-import Model.ADT.IHeap;
+import Model.ADT.Interfaces.IDict;
+import Model.ADT.Interfaces.IHeap;
 import Model.ProgramState.PrgState;
 import Model.Values.RefValue;
 import Model.Values.Value;

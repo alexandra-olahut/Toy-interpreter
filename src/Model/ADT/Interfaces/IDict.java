@@ -1,4 +1,4 @@
-package Model.ADT;
+package Model.ADT.Interfaces;
 
 import java.util.HashMap;
 import java.util.Map;
