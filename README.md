@@ -5,9 +5,9 @@ What it implements:
 - Int, Boolean, String, Reference types
 - arithmetic, logic, relational expressions
 - basic statements: print, variable declaration, assignment, sleep
-- conditional assignments and loops
-- files
-- working with a heap
+- conditional assignments and loops (while, for, if, switch, etc.)
+- files (open/read/close)
+- working with a heap (+ simple garbage collector)
 - threads (fork) and synchronization mechanisms: barrier, semaphore, lock, countdown latch
 
 *I attached a few images for a preview of the application running with GUI*
