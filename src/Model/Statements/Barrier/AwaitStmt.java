@@ -43,7 +43,7 @@ public class AwaitStmt implements Stmt {
         List<Integer> list = foundEntry.getValue();
 
         if(n1>length){
-            if(list.contains(state.getId()))
+            if (list.contains(state.getId()))
                 state.getExeStack().push(new AwaitStmt(var));
             else {
                 list.add(state.getId());

@@ -1,0 +1,757 @@
+
+PROGRAM - 31
+  Exe Stack:
+int* v1; int cnt; v1 = new(1); createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+int* v1
+int cnt; v1 = new(1); createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+int cnt; v1 = new(1); createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+v1-->null
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+int cnt
+v1 = new(1); createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+v1-->null
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+v1 = new(1); createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->null
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+v1 = new(1)
+createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->null
+  Out:
+  FileTable:
+  Heap:
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+createSemaphore(cnt,*(v1)); fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+createSemaphore(cnt,*(v1))
+fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt)); fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+fork(acquire(cnt); *v1 = (*(v1) * 10); print(*(v1)); release(cnt))
+fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)); acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+fork(acquire(cnt); *v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt))
+acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt); print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+*v1 = (*(v1) * 10); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt)
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+*v1 = (*(v1) * 10)
+print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->1
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt)
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt)
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+print(*(v1))
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt)
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [32]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+acquire(cnt)
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 32
+  Exe Stack:
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+print((*(v1) - 1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+print((*(v1) - 1))
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+acquire(cnt)
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [31]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 31
+  Exe Stack:
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+*v1 = (*(v1) * 10); *v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+*v1 = (*(v1) * 10)
+*v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->10
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+*v1 = (*(v1) * 2); print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->100
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+*v1 = (*(v1) * 2)
+print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->100
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+print(*(v1)); release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->200
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+print(*(v1))
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+  FileTable:
+  Heap:
+1-->200
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+release(cnt)
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+200
+  FileTable:
+  Heap:
+1-->200
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : [33]
+  LockTable:
+  LatchTable:
+
+PROGRAM - 33
+  Exe Stack:
+  Sym Table:
+cnt-->0
+v1-->(1,int)
+  Out:
+10
+9
+200
+  FileTable:
+  Heap:
+1-->200
+  BarrierTable:
+  SemaphoreTable:
+0-->1 : []
+  LockTable:
+  LatchTable:

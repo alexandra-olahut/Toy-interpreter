@@ -6,6 +6,7 @@ import Model.ADT.*;
 import Model.Expressions.*;
 import Model.ProgramState.PrgState;
 import Model.Statements.*;
+import Model.Statements.Barrier.NewBarrierStmt;
 import Model.Statements.Conditionals.CondAssignStmt;
 import Model.Statements.Conditionals.IfStmt;
 import Model.Statements.Conditionals.SwitchStmt;
@@ -14,9 +15,17 @@ import Model.Statements.Files.OpenRFile;
 import Model.Statements.Files.ReadFile;
 import Model.Statements.Heap.NewStmt;
 import Model.Statements.Heap.WriteHpStmt;
+import Model.Statements.Latch.CountDownStmt;
+import Model.Statements.Latch.NewLatchStmt;
+import Model.Statements.Lock.LockStmt;
+import Model.Statements.Lock.NewLockStmt;
+import Model.Statements.Lock.UnlockStmt;
 import Model.Statements.Loops.ForStmt;
 import Model.Statements.Loops.RepeatUntilStmt;
 import Model.Statements.Loops.WhileStmt;
+import Model.Statements.Semaphore.AcquireStmt;
+import Model.Statements.Semaphore.CreateSemaphoreStmt;
+import Model.Statements.Semaphore.ReleaseStmt;
 import Model.Types.BoolType;
 import Model.Types.IntType;
 import Model.Types.RefType;
@@ -94,7 +103,7 @@ public class ControllerMainWindow implements Initializable {
         newWindow.initOwner(mainStage);
 
         newWindow.setX(mainStage.getX() - 240);
-        newWindow.setY(mainStage.getY() + 10);
+        newWindow.setY(mainStage.getY() - 23);
 
         newWindow.show();
     }
@@ -284,6 +293,27 @@ public class ControllerMainWindow implements Initializable {
         Controller ctr26 = new Controller(repo26);
 
 
+        Stmt exLock = exLock();
+        PrgState prg27 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exLock);
+        IRepository repo27 = new Repository("logLock.txt", prg27);
+        Controller ctr27 = new Controller(repo27);
+
+        Stmt exBarrier = exBarrier();
+        PrgState prg28 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exBarrier);
+        IRepository repo28 = new Repository("logBarrier.txt", prg28);
+        Controller ctr28 = new Controller(repo28);
+
+        Stmt exLatch = exLatch();
+        PrgState prg29 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exLatch);
+        IRepository repo29 = new Repository("logLatch.txt", prg29);
+        Controller ctr29 = new Controller(repo29);
+
+        Stmt exSemaphore = exSemaphore();
+        PrgState prg30 = new PrgState(new MyStack<>(), new MyDict<>(), new MyList<>(), new FileTable(), new Heap(), new BarrierTable(), new SemaphoreTable(), new LockTable(), new LatchTable(), exSemaphore);
+        IRepository repo30 = new Repository("logSemaphore.txt", prg30);
+        Controller ctr30 = new Controller(repo30);
+
+
 
         menu = new TextMenu();
 //        menu.addCommand(new ExitCommand("0", "exit"));
@@ -313,8 +343,107 @@ public class ControllerMainWindow implements Initializable {
         menu.addCommand(new RunExampleCommand("24", exSleep.toString(), ctr24, exSleep));
         menu.addCommand(new RunExampleCommand("25", SWITCH.toString(), ctr25, SWITCH));
         menu.addCommand(new RunExampleCommand("26", exWait.toString(), ctr26, exWait));
+        menu.addCommand(new RunExampleCommand("27", exLock.toString(), ctr27, exLock));
+        menu.addCommand(new RunExampleCommand("28", exBarrier.toString(), ctr28, exBarrier));
+        menu.addCommand(new RunExampleCommand("29", exLatch.toString(), ctr29, exLatch));
+        menu.addCommand(new RunExampleCommand("30", exSemaphore.toString(), ctr30, exSemaphore));
     }
 
+
+    private static Stmt exLock(){
+        return new CompStmt(new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(new VarDeclStmt("v2", new RefType(new IntType())),
+                        new CompStmt(new VarDeclStmt("x", new IntType()), new CompStmt(new VarDeclStmt("q", new IntType()),
+                                new CompStmt(new NewStmt("v1", new ValueExp(new IntValue(20))),
+                                        new CompStmt(new NewStmt("v2", new ValueExp(new IntValue(30))),
+                                                new CompStmt(new NewLockStmt("x"),
+                                                        new CompStmt(new ForkStmt(new CompStmt(new ForkStmt(new CompStmt(new LockStmt("x"),
+                                                                new CompStmt(new WriteHpStmt("v1", new ArithExp('-', new ReadHpExp(new VarExp("v1")),new ValueExp(new IntValue(1)))),
+                                                                        new UnlockStmt("x")))),
+                                                                new CompStmt(new LockStmt("x"),
+                                                                        new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")),new ValueExp(new IntValue(10)))),
+                                                                                new UnlockStmt("x"))))),
+                                                                new CompStmt(new NewLockStmt("q"),
+                                                                        new CompStmt(new ForkStmt(new CompStmt(new ForkStmt(new CompStmt(new LockStmt("q"),
+                                                                                new CompStmt(new WriteHpStmt("v2", new ArithExp('+', new ReadHpExp(new VarExp("v2")),new ValueExp(new IntValue(5)))),
+                                                                                        new UnlockStmt("q")))),
+                                                                                new CompStmt(new LockStmt("q"),
+                                                                                        new CompStmt(new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")),new ValueExp(new IntValue(10)))),
+                                                                                                new UnlockStmt("q"))))),
+                                                                                new CompStmt(new NopStmt(), new CompStmt(new NopStmt(), new CompStmt(new NopStmt(), new CompStmt(new NopStmt(),
+                                                                                        new CompStmt(new LockStmt("x"),
+                                                                                                new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v1"))),
+                                                                                                        new CompStmt(new UnlockStmt("x"), new CompStmt(new LockStmt("q"),
+                                                                                                                new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v2"))),
+                                                                                                                        new UnlockStmt("q"))))))))))))))))))));
+    }
+
+    private static Stmt exBarrier(){
+        Stmt line1 = new CompStmt(new ForkStmt(new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"),
+                new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(10)))))),
+                new PrintStmt(new ReadHpExp(new VarExp("v1"))));
+        Stmt line2 = new CompStmt(new ForkStmt(new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"),
+                new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")), new ValueExp(new IntValue(10)))))),
+                new CompStmt(new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")), new ValueExp(new IntValue(10)))),
+                        new PrintStmt(new ReadHpExp(new VarExp("v2")))));
+        Stmt forks = new CompStmt(line1, new CompStmt(line2,
+                new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"), new PrintStmt(new ReadHpExp(new VarExp("v3"))))));
+
+        return new CompStmt(new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(new VarDeclStmt("v2", new RefType(new IntType())),
+                        new CompStmt(new VarDeclStmt("v3", new RefType(new IntType())),
+                                new CompStmt(new NewStmt("v1", new ValueExp(new IntValue(2))),
+                                        new CompStmt(new NewStmt("v2", new ValueExp(new IntValue(3))),
+                                                new CompStmt(new NewStmt("v3", new ValueExp(new IntValue(4))),
+                                                        new CompStmt(new NewBarrierStmt("cnt", new ReadHpExp(new VarExp("v2"))),
+                                                                new CompStmt(new ForkStmt(new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"),
+                                                                        new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(10)))),
+                                                                                new PrintStmt(new ReadHpExp(new VarExp("v1")))))),
+                                                                        new CompStmt(new ForkStmt(new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"),
+                                                                                new CompStmt(new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")), new ValueExp(new IntValue(10)))),
+                                                                                        new CompStmt(new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")), new ValueExp(new IntValue(10)))),
+                                                                                                new PrintStmt(new ReadHpExp(new VarExp("v2"))))))),
+                                                                                new CompStmt(new Model.Statements.Barrier.AwaitStmt("cnt"), new PrintStmt(new ReadHpExp(new VarExp("v3")))))))))))));
+    }
+
+    private static Stmt exLatch(){
+        return new CompStmt(new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(new VarDeclStmt("v2", new RefType(new IntType())),
+                        new CompStmt(new VarDeclStmt("v3", new RefType(new IntType())),
+                                new CompStmt(new VarDeclStmt("cnt", new IntType()),
+                                        new CompStmt(new NewStmt("v1", new ValueExp(new IntValue(2))),
+                                                new CompStmt(new NewStmt("v2", new ValueExp(new IntValue(3))),
+                                                        new CompStmt(new NewStmt("v3", new ValueExp(new IntValue(4))),
+                                                                new CompStmt(new NewLatchStmt("cnt", new ReadHpExp(new VarExp("v2"))),
+                                                                        new CompStmt(new ForkStmt(new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(10)))),
+                                                                                new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v1"))),
+                                                                                        new CompStmt(new CountDownStmt("cnt"),
+                                                                                                new ForkStmt(new CompStmt(new WriteHpStmt("v2", new ArithExp('*', new ReadHpExp(new VarExp("v2")), new ValueExp(new IntValue(10)))),
+                                                                                                        new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v2"))),
+                                                                                                                new CompStmt(new CountDownStmt("cnt"),
+                                                                                                                        new ForkStmt(new CompStmt(new WriteHpStmt("v3",
+                                                                                                                                new ArithExp('*', new ReadHpExp(new VarExp("v3")), new ValueExp(new IntValue(10)))),
+                                                                                                                                new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v3"))), new CountDownStmt("cnt")))))))))))),
+                                                                                new CompStmt(new Model.Statements.Latch.AwaitStmt("cnt"),
+                                                                                        new CompStmt(new PrintStmt(new ValueExp(new IntValue(100))),
+                                                                                                new CompStmt(new CountDownStmt("cnt"), new PrintStmt(new ValueExp(new IntValue(100)))))))))))))));
+    }
+
+    private static Stmt exSemaphore(){
+        return new CompStmt(new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(new VarDeclStmt("cnt", new IntType()),
+                        new CompStmt(new NewStmt("v1", new ValueExp(new IntValue(1))),
+                                new CompStmt(new CreateSemaphoreStmt("cnt", new ReadHpExp(new VarExp("v1"))),
+                                        new CompStmt(new ForkStmt(new CompStmt(new AcquireStmt("cnt"),
+                                                new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(10)))),
+                                                        new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v1"))), new ReleaseStmt("cnt"))))),
+                                                new CompStmt(new ForkStmt(new CompStmt(new AcquireStmt("cnt"),
+                                                        new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")),new ValueExp(new IntValue(10)))),
+                                                                new CompStmt(new WriteHpStmt("v1", new ArithExp('*', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(2)))),
+                                                                        new CompStmt(new PrintStmt(new ReadHpExp(new VarExp("v1"))), new ReleaseStmt("cnt")))))),
+                                                        new CompStmt(new AcquireStmt("cnt"), new CompStmt(new PrintStmt(new ArithExp('-', new ReadHpExp(new VarExp("v1")), new ValueExp(new IntValue(1)))),
+                                                                new ReleaseStmt("cnt")))))))));
+    }
 
 
     private static Stmt exWait(){
