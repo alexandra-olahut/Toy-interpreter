@@ -20,9 +20,6 @@ public class Controller {
 
     public Controller(IRepository r) {repo=r; displayFlag=true;}
 
-
-//    void setFlag(boolean f) {displayFlag=f;}
-
     public List<PrgState> removeCompletedPrg(List<PrgState> programs) {
         return programs.stream()
                 .filter(PrgState::isNotCompleted)
@@ -82,9 +79,6 @@ public class Controller {
         repo.getMainPrg().getHeap().setContent((HashMap<Integer, Value>) GarbageCollector.safestGarbageCollector(repo));
         oneStepForAllPrg(prgList);
 
-//        prgList = removeCompletedPrg(repo.getPrgList());
-//        repo.setPrgList(prgList);
-
         if(prgList.size() == 0)
             executor.shutdownNow();
     }
@@ -101,41 +95,4 @@ public class Controller {
     public ExecutorService getExecutor() {return executor;}
     public void setExecutor() {executor = Executors.newFixedThreadPool(2);}
 
-
-
-
-/*
-    public void allStep() throws Exception{
-        PrgState prg = repo.getCurrentPrg();
-        repo.logPrgStateExec();
-        if (displayFlag)
-            System.out.println("Initial state:");
-        System.out.println(prg);
-
-        while (!prg.getExeStack().isEmpty()){
-            oneStep(prg);
-
-            prg.getHeap().setContent((HashMap<Integer, Value>) GarbageCollector.safeGarbageCollector(prg.getSymTable(), prg.getHeap()));
-          unsafeGarbageCollector(
-                    GarbageCollector.getAllAddr(prg.getSymTable().getContent().values(), prg.getSymTable(), prg.getHeap()),
-                    prg.getHeap().getContent()));
-
-            repo.logPrgStateExec();
-            if(displayFlag)
-                System.out.println(prg);
-        }
-    }
-
-    public void printOutput(){
-        System.out.println(" --- Program output: ---");
-        PrgState prg = repo.getCurrentPrg();
-        IList<Value> output = prg.getOut();
-
-        Iterator<Value> it = output.iterator();
-        while(it.hasNext()){
-            Value item = it.next();
-            System.out.println(item);
-        }
-    }
-*/
 }

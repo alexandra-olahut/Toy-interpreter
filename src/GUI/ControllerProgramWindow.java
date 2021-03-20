@@ -139,22 +139,8 @@ public class ControllerProgramWindow implements Initializable {
             populateAll();
 
         controller.getRepo().setPrgList(controller.removeCompletedPrg(controller.getRepo().getPrgList()));
-
-        //        populatePrgId();
-        /*
-               if(example.getController().getPrograms().size() > 0)
-            example.getController().executeOneStep();
-        if(example.getController().getPrograms().size() > 0)
-            populate();
-        else
-            mainPrglist.getItems().remove(example);
-            mainPrglist.getSelectionModel().clearSelection();
-
-         */
     }
 
-
-//    public void setController(Controller c) {controller = c;}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

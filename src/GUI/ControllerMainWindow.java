@@ -91,9 +91,6 @@ public class ControllerMainWindow implements Initializable {
 
         Parent newRoot = loader.load();
 
-//        ControllerProgramWindow controller = loader.getController();
-//        controller.setController(program.getController());
-
         Scene newScene = new Scene(newRoot);
         Stage newWindow = new Stage();
         newWindow.setTitle("Program " + program.getKey());
@@ -102,8 +99,8 @@ public class ControllerMainWindow implements Initializable {
         newWindow.initModality(Modality.WINDOW_MODAL);
         newWindow.initOwner(mainStage);
 
-        newWindow.setX(mainStage.getX() - 240);
-        newWindow.setY(mainStage.getY() - 23);
+        newWindow.setX(mainStage.getX() - 250);
+        newWindow.setY(mainStage.getY() - 40);
 
         newWindow.show();
     }
